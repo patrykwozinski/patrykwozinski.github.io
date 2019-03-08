@@ -14,10 +14,10 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Blog @patryk
+title: "Blog @patryk"
 
 # Short description of your site
-description: Blog związany z programowaniem, obiektowością, wzorcami oraz wszelką technologią
+description: "Blog związany z programowaniem, obiektowością, wzorcami oraz wszelką technologią"
 
 # --- Navigation bar options --- #
 

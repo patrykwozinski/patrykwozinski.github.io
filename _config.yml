@@ -71,22 +71,9 @@ author:
 social-network-links:
   rss: true
   email: "patryk.wozinski@gmail.com"
-  facebook: daattali
-  github: daattali
-  twitter: daattali
-#  reddit: yourname
-#  google-plus: +DeanAttali
-#  linkedin: daattali
-#  xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
-#  youtube: user/deanat78
-#  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
+  github: patrykwozinski
+  linkedin: patrykwozinski
+  stackoverflow: "7172954/patryk-woziński"
 
 # Select which share links to show in posts
 share-links-active:

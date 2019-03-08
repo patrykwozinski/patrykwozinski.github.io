@@ -25,9 +25,8 @@ description: Blog związany z programowaniem, obiektowością, wzorcami oraz wsz
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
+    - LinkedIn: "https://www.linkedin.com/in/patrykwozinski/"
+    - Docplanner Caareers: "https://www.znanylekarz.pl/kariera"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar

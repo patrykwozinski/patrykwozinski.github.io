@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Jak optymalizować by nie zwariować?
-gh-repo: daattali/beautiful-jekyll
 gh-badge: [follow]
 tags: [performance, optimization]
 comments: true

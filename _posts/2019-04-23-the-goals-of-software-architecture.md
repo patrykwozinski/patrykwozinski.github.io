@@ -3,7 +3,6 @@ layout: post
 title: The goals of Software Architecture
 gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
-bigimg: https://miro.medium.com/max/1600/1*feyLvvp9FE3QKqw7DvDECQ@2x.png
 tags: [software architecture, architecture]
 comments: true
 ---

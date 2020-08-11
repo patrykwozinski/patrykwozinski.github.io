@@ -12,12 +12,13 @@ Hej! Chciałbym w tym wpisie poruszyć temat optymalizacji naszych ukochanych ap
 
 Aktualne nasze spotkanie poświęcę na temat tego co w ogóle warto optymalizować i kiedy to robić. Nie wiem na ile jest Wam znana książka „DevOps Handbook", ale została tam wdrożona ciekawa teoria związana z ograniczeniami nam stawianymi. Tak naprawdę jest ich wiele poziomów i dopóki tych pierwszych nie odblokujemy, nie powinnismy iść dalej. Czyli tak naprawdę należy skupić się na problemach, które są największe i ich usunięcie da nam najwięcej korzyści.
 
-PICTURE
+![time](https://miro.medium.com/max/700/1*q1NSqKUQ4Lbj2tIx6MgnAA@2x.jpeg)
 
 ## Poszukiwania bottlenecków
 W jaki sposób podejść do znalezienia miejsc w aplikacji, które zasługują na naszą uwagę? Warto zbierać metryki – wiem, że brzmi to nudno i przecież widzimy swój kod – to po co jeszcze na jego temat zbierać jakieś informacje?! Uwierzcie mi, że to się odpłaci z nawiązką. Jakieś dwa lata temu zbudowałem narzędzie, które monitoruje użycie konkretnych części aplikacji, by później na tej podstawie generować raport miejsc z martwym kodem. Wszystko fajnie – trupy znajdowaliśmy dzięki temu w łatwy sposób, zarówno nieużywane kontrolery, szablony widoków czy masa innych informacji. Ale… Pewnego dnia zostałem oświecony i zrozumiałem, że przecież mogę tego narzędzia użyć również w inny sposób. Jaki? Zacząłem analizować, które miejsca są najczęściej używane – na przykład kontrolery Symfony (taki framework Web MVC php). Zauważyłem, że wiele z nich jest używanych niesamowicie często. Teraz uwaga – skupcie się – kojarzycie zasadę Pareta (parreto principle)? Traktuje ona w tym przypadku, że 20% najczęściej używanych kontrolerów odpowiedzialnych jest za 80% całego ruchu. Tak też było – jeżeli skupimy się na tych miejscach, które otrzymują 20% requestów HTTP – zyskamy bardzo dużo. Gdybyśmy zabrali się nawet za najwolniejszy endpoint świata, który jest rzadko używany – nie mielibyśmy tak dużego wzrostu ogólnego APDEX.
 
-PICTURE
+![analyse](https://miro.medium.com/max/700/1*iIvTGSztbCq08cjmlaNvxw@2x.jpeg)
+<sup>Najczęściej używane endpointy w ciągu 24h w jednej z aplikacji (ukryłem nazwy :P)</sup>
 
 Jak widzicie na powyższym wykresie – niektóre miejsca są znacznie częściej używane od innych. Także skoro tak bardzo walczą o naszą atencję – przyjrzyjmy się im. :) Ja w tym przypadku uciąłem jednym magicznym trickiem liczbę requestów z 2.4mln dziennie do poziomu około niecałych 75tys dziennie. W kolejnych wpisach opowiem o tym więcej.
 

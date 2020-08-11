@@ -22,8 +22,8 @@ W jaki sposób podejść do znalezienia miejsc w aplikacji, które zasługują n
 
 <p align="center">
   <img src="https://miro.medium.com/max/700/1*iIvTGSztbCq08cjmlaNvxw@2x.jpeg" alt="Usage analyse"/>
+  <sup>Najczęściej używane endpointy w ciągu 24h w jednej z aplikacji (ukryłem nazwy :P)</sup>
 </p>
-<sup>Najczęściej używane endpointy w ciągu 24h w jednej z aplikacji (ukryłem nazwy :P)</sup>
 
 Jak widzicie na powyższym wykresie – niektóre miejsca są znacznie częściej używane od innych. Także skoro tak bardzo walczą o naszą atencję – przyjrzyjmy się im. :) Ja w tym przypadku uciąłem jednym magicznym trickiem liczbę requestów z 2.4mln dziennie do poziomu około niecałych 75tys dziennie. W kolejnych wpisach opowiem o tym więcej.
 

@@ -14,10 +14,10 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: "Blog @patryk"
+title: "chilldev.tech"
 
 # Short description of your site
-description: "Blog związany z programowaniem, obiektowością, wzorcami oraz wszelką technologią"
+description: "Technology related blog. It's about the performance, software architecture and many more things."
 
 # --- Navigation bar options --- #
 
@@ -26,7 +26,6 @@ navbar-links:
   About Me: "aboutme"
   Resources:
     - LinkedIn: "https://www.linkedin.com/in/patrykwozinski/"
-    - Docplanner Caareers: "https://www.znanylekarz.pl/kariera"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -86,7 +85,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "patrykwozinski.github.io"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "chilldev.tech"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 

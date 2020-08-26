@@ -10,6 +10,8 @@ comments: true
 # Three simple testing tricks using PHP and Symfony
 Hi! I’ve written this post to help you and keep in history something that makes application testing easier. The first two tricks are related to the **PHP Symfony** web framework and functional/integration testing in this framework, but the second one is a pattern that every PHP engineer should know. You can treat this article as a note created for me from the past.
 
+---
+
 ### Separated implementations for functional testing and the other environments
 While I was working on my side-project I needed something that enables me to use different implementations of some interfaces in the testing environment and the others. I couldn’t find it in the framework guide so maybe it’s helpful not only for me.
 In the example, we have an interface like:

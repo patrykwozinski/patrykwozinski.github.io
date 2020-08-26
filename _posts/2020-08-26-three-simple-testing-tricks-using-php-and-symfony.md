@@ -53,12 +53,14 @@ As you may know or now - functional tests are not using third party adapters. Th
 Coming to the point - we want to use it in different situations - other implementations. As a default, we’re registering services in something like `/config/services.yaml`. But how to change implementation for the tests? I’ve moved definitions to the `/config/packages/services.yaml` and created `/config/packages/test/services.yaml` with the same keys but different implementation classes. That’s easy and allows us to make the functional tests as fast as we can do them.
 Definitions should looks like:
 
-```yaml /config/packages/services.yaml
+```yaml
+# /config/packages/services.yaml
 services:
 	App\Domain\Customers: '@App\Infrastructure\Doctrine\ORM\DoctrineORMCustomers'
 ```
 
-```yaml /config/packages/test/services.yaml
+```yaml
+# /config/packages/test/services.yaml
 services:
 	App\Domain\Customers: '@App\Infrastructure\InMemory\InMemoryCustomers'
 ```

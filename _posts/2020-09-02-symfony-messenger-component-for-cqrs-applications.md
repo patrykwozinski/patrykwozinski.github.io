@@ -448,3 +448,93 @@ In this example I’ve used an anonymous class that is implementing `MessageBusI
 
 ### Integration testing
 In a system like this, you should test with integration tests the adapters to the external world. In this example, we don’t have them, but you could check via integration testing things e.g. like the implementation of the Doctrine repository. For info what is a mother object [check this article](https://patryk.it/three-simple-testing-tricks-using-php-and-symfony).
+```php
+<?php
+
+declare(strict_types=1);
+
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+
+final class DoctrineORMShopsTest extends KernelTestCase
+{
+    private EntityManagerInterface $em;
+    private DoctrineORMShops $repository;
+
+    protected function setUp(): void
+    {
+        static::bootKernel();
+
+        $this->em = self::$container->get(EntityManagerInterface::class);
+        $this->repository = new DoctrineORMShops($this->em);
+    }
+
+    public function testShopSucceessfullyAdded(): void
+    {
+        $shop = ShopMother::any();
+
+        $this->repository->add($shop);
+
+        /** @var Shop $existing */
+        $existing = $this->repository->ofId($shop->id());
+
+        self::assertEquals($shop->id(), $existing->id());
+    }
+
+    public function testShopNotFoundWhenWasNotAdded(): void
+    {
+        $this->expectException(ShopNotFound::class);
+
+        $this->repository->ofId(ShopIdMother::any());
+    }
+}
+```
+
+### Functional testing
+As functional testing, I mean checking if the whole process works and returns the expected result. These tests are not using third party adapters like Doctrine, etc. — they should use fake implementations that help us with quick functional application testing. We can test controllers, UI CLI commands, and any place that is our user interface layer of the system.
+```php
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Bundle\FrameworkBundle\KernelBrowser;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\HttpFoundation\Response;
+
+final class CreateShopControllerTest extends WebTestCase
+{
+    private KernelBrowser $client;
+
+    protected function setUp(): void
+    {
+        $this->client = self::createClient();
+    }
+
+    public function testShopSuccessfullyCreated(): void
+    {
+        $this->client->request('POST', '/shops', [
+            'name' => 'My great shop',
+        ]);
+
+        self::assertEquals(Response::HTTP_ACCEPTED, $this->client->getResponse()->getStatusCode());
+    }
+    
+    public function testCannotCreateShopWhenNameTaken(): void
+    {
+        $existingShop = ShopMother::any();
+        static::$container->get(Shops::class)->add(existingShop); // You can replace it with any fixture-lib
+    
+        $this->client->request('POST', '/shops', [
+            'name' => ShopMother::NAME, // We're taking the same name as existing in 30 line
+        ]);
+
+        self::assertEquals(Response::HTTP_CONFLICT, $this->client->getResponse()->getStatusCode());
+    }
+}
+```
+Of course, you should verify if the response is invalid format, etc. Similarly, we could test the CLI commands.
+
+## So…
+As you see implementing CQRS in the Symfony using the Messenger component is pretty easy. At this moment I recommend to you read some articles about the whole approach that CQRS is:
+- https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/
+- https://github.com/ddd-by-examples/all-things-cqrs

@@ -139,3 +139,62 @@ final class MessengerQueryBus implements QueryBus
 Do you see **differences between QueryBus and CommandBus implementations**? In a `MessengerQueryBus`, I’ve used `HandleTrait` because as default, buses are not returning results and this trait just makes easier fetching results from the buses. I hate that in the PHP we don’t have generic types so creating QueryBuses would be much more elegant. Meh, just dreams. In the real world, we just need to define `mixed` return type in a docblock.
 
 ## What about a configuration?
+Okay, writing the code as far as I think is easy for every developer that is reading this post, and you’re here because you want to get something interesting. Configuring services is not the most exciting activity, but anyway, let’s dive into this topic.
+
+At first, we need to define buses and their transports. Most simply, you can add these lines to your messenger YAML configuration.
+```yaml
+# /config/packages/messenger.yaml
+
+framework:
+    messenger:
+        default_bus: command.bus
+
+        buses:
+            command.bus:
+                middleware:
+                    - doctrine_transaction
+            query.bus: ~
+
+        transports:
+            sync: 'sync://'
+            async: '%env(MESSENGER_TRANSPORT_DSN)%'
+
+        routing:
+            'App\Command\BuyItem': sync
+            'App\Command\SellItem': async
+            'App\Query\ListCartItems': sync
+
+```
+
+### Few words about the buses
+As you can see we have defined two buses — one for queries and one for commands. If you’re using Doctrine you can add middleware for the command bus that is **handling the messages transactional** so thanks to this you don’t need to do any mess in your command handlers. :) Just assign `doctrine_transaction` middleware and that’s all. You can also define there default middleware for enabling the option to create buses that don’t have any handler of some messages. That’s especially important for creating event buses so **it’s not covered in this article**, but I want to let you know about it. It could look like:
+```yaml
+default_middleware: allow_no_handlers
+```
+
+### Messenger transports
+Okay. So the next lines of given YAML configuration define transports (ways to handle messages). In this example, you can see the `sync` and `async` as the simplest cases. **Sync** means the transport is realized synchronously in the request-response-cycle and **async** is about doing something in the background (in simple words). Let’s stop for a moment here. If you’re testing-freak — **it’s good to add the definition of async for test purposes**. You can do that creating a test configuration like the following one:
+```yaml
+# /config/packages/test/messenger.yaml
+
+framework:
+    messenger:
+        transports:
+            async: 'in-memory://'
+```
+Thanks to this — your functional testing is dispatching asynchronous messages in memory (instead of RabbitMQ or something) so you can verify the behavior of the application the closest to real conditions. That’s just a testing-tip — [for more you can visit this article](https://patryk.it/three-simple-testing-tricks-using-php-and-symfony).
+
+### Tag your handlers
+So you have configured buses and transports. It's time to tag your handlers to specific buses using Messenger mechanisms. That’s easy. You can add the subsequent lines to your main `services.yaml`.
+```yaml
+# /config/services.yaml
+
+services:
+    _instanceof:
+        App\Common\CQRS\CommandHandler:
+            tags:
+                - { name: messenger.message_handler, bus: command.bus }
+        App\Common\CQRS\QueryHandler:
+            tags:
+                - { name: messenger.message_handler, bus: query.bus }
+```

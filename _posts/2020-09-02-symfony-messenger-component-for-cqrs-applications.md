@@ -536,5 +536,5 @@ Of course, you should verify if the response is invalid format, etc. Similarly, 
 
 ## So…
 As you see implementing CQRS in the Symfony using the Messenger component is pretty easy. At this moment I recommend to you read some articles about the whole approach that CQRS is:
-- https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/
-- https://github.com/ddd-by-examples/all-things-cqrs
+- [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/)
+- [All things CQRS](https://github.com/ddd-by-examples/all-things-cqrs)

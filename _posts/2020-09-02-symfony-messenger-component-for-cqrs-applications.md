@@ -7,7 +7,6 @@ tags: [php, symfony, cqrs]
 comments: true
 ---
 
-# Symfony Messenger component for CQRS applications
 Hi there! This article is mostly for people who, like me some time ago, are looking for information on how to configure Messenger for applications based on **CQRS architectural pattern**. To be honest, Messenger is my favorite SF component.
 
 So at first — what is a CQRS? It’s the acronym of **Command-Query Segregation Responsibility**. In simple words — you’re split write-model from the read-model. That’s an approach first described by **Greg Young**.
@@ -445,3 +444,7 @@ final class MessengerCommandBusTest extends TestCase
     }
 }
 ```
+In this example I’ve used an anonymous class that is implementing `MessageBusInterface` — but in a real-world application, you can split it as a `SpyMessageBus` with the `lastDispatchedCommand(): Command. Also, the application-layer is unit-testable.
+
+### Integration testing
+In a system like this, you should test with integration tests the adapters to the external world. In this example, we don’t have them, but you could check via integration testing things e.g. like the implementation of the Doctrine repository. For info what is a mother object [check this article](https://patryk.it/three-simple-testing-tricks-using-php-and-symfony).

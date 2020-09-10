@@ -107,3 +107,33 @@ interface QueryHandler
 }
 ```
 **Query** and **QueryHandler** are without any declared methods. And **QueryBus** is similar to CommandBus - place where is the point of dependency inversion and abstraction of Messenger. Another reminder — **don’t use directly the Messenger implementation of QueryBus, do it only via QueryBus interface**. Look at the MessageBusInterface parameter — the name is `$queryBus` because it indicates name of the bus (`query.bus`).
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Common\CQRS;
+
+use Symfony\Component\Messenger\HandleTrait;
+use Symfony\Component\Messenger\MessageBusInterface;
+
+final class MessengerQueryBus implements QueryBus
+{
+    use HandleTrait {
+        handle as handleQuery;
+    }
+
+    public function __construct(MessageBusInterface $queryBus)
+    {
+        $this->messageBus = $queryBus;
+    }
+
+    /** @return mixed */
+    public function handle(Query $query)
+    {
+        return $this->handleQuery($query);
+    }
+}
+```
+
+Do you see **differences between QueryBus and CommandBus implementations**? In a `MessengerQueryBus`, I’ve used `HandleTrait` because as default, buses are not returning results and this trait just makes easier fetching results from the buses. I hate that in the PHP we don’t have generic types so creating QueryBuses would be much more elegant. Meh, just dreams. In the real world, we just need to define `mixed` return type in a docblock.

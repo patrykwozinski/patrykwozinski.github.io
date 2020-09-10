@@ -32,4 +32,28 @@ Let’s start from including new dependency of our application via composer simp
 composer require messenger
 ```
 
+### Command building blocks
+In my example, I have a common package with CQRS component elements and there are three interfaces responsible for commands like the following:
+```php
+<?php 
 
+declare(strict_types=1);
+
+namespace App\Common\CQRS;
+
+interface Command
+{
+}
+
+interface CommandBus
+{
+    public function dispatch(Command $command): void;
+}
+
+interface CommandHandler
+{
+}
+
+```
+
+**Command** and **CommandHandler** are just empty interfaces that are defining functionalities. **CommandBus** interface is a place where the DI lives. Thanks to this we can in simply way invert the dependencies. After all, we have an implementation that is using the Messenger component. **Remember: you should NEVER use directly the Messenger implementation of the CommandBus.**

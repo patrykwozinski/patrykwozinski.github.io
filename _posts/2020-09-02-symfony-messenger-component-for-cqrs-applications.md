@@ -385,3 +385,63 @@ final class CreateShopController extends AbstractController
     }
 }
 ```
+As you can see I’ve added a private method for the handling query — just for a strictly typed result. The query is done via the synchronous process, and we’re waiting for the response from the read-model, but the write-model is realized via asynchronous processing, so we can’t wait for the result. You can also create a validator using our query to check if the name is unique and create for it specific validation constraint.
+
+## Testing CQRS systems
+You may be asking yourself how to test applications based on CQRS architectural approach. It’s not that hard — but of course, exist many ways to do that.
+
+### Unit testing
+Using the unit tests you can check the domain-layer that is not covered in this article. I mean — these blocks will be used inside of the application layer (use-cases) which are covered in our example via Command Handlers.
+
+The next thing that you can check via unit tests is an infrastructure layer that is not an adapter of the external world like implementations of the repositories, HTTP clients, etc. In this example, you can do that with the Messenger implementations of the buses. They are based on the interface MessageBusInterface so you can easily mock it using spy test-double to verify if something occurred.
+```php
+<?php
+
+declare(strict_types=1);
+
+use App\Common\CQRS\Command;
+use App\Common\CQRS\MessengerCommandBus;
+use App\Tests\Common\CQRS\TestDouble\DummyCommand;
+use PHPUnit\Framework\TestCase;
+use Symfony\Component\Messenger\Envelope;
+use Symfony\Component\Messenger\MessageBusInterface;
+
+final class MessengerCommandBusTest extends TestCase
+{
+    private MessageBusInterface $symfonyMessageBus;
+    private MessengerCommandBus $commandBus;
+
+    protected function setUp(): void
+    {
+        $this->symfonyMessageBus = $this->assembleSymfonyMessageBus();
+        $this->commandBus = new MessengerCommandBus($this->symfonyMessageBus);
+    }
+
+    public function testMessageForwardedToMessageBusWhileDispatching(): void
+    {
+        $command = new DummyCommand();
+        $this->commandBus->dispatch($command);
+
+        self::assertSame($command, $this->symfonyMessageBus->lastDispatchedCommand());
+    }
+
+    private function assembleSymfonyMessageBus(): MessageBusInterface
+    {
+        return new class() implements MessageBusInterface {
+            private Command $dispatchedCommand;
+
+            public function dispatch($message, array $stamps = []): Envelope
+            {
+                $this->dispatchedCommand = $message;
+
+                return new Envelope($message);
+            }
+
+            public function lastDispatchedCommand(): Command
+            {
+                return $this->dispatchedCommand;
+            }
+        };
+    }
+}
+```

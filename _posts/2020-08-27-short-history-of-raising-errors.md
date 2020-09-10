@@ -7,7 +7,6 @@ tags: [php, oop, errors]
 comments: true
 ---
 
-#  Don’t give up! 🙌 A short history of raising errors 
 I have written about an error topic about two years ago. From this time some things in my mind have changed and that’s totally fine. I feel I’m just a better engineer from this time.
 Okay, so what’s happened to me so I am writing again about the same thread? I want to share with you my observations of how people are working with exceptions — what are the mistakes etc. The examples will be in PHP, but I think you can easily translate the problems into your favorite object-oriented programming language.
 I hope you’ll somehow enjoy this post. 🍪

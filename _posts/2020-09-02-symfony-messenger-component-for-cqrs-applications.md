@@ -198,3 +198,73 @@ services:
             tags:
                 - { name: messenger.message_handler, bus: query.bus }
 ```
+Thanks to this, all the query and command handlers are tagged as Symfony message handlers to the specific buses.
+
+## Solving business use-cases in handlers
+Finally, we’re here! Let’s dive into the solving problems using business-case handlers.
+In this example, we’re in the e-Commerce context, so we have a use-case like: create a shop if the given shop name is unique. This case could be implemented using simple CRUD mechanisms and scaffolded controllers, but **WE ARE AMBITIOUS**… and that’s just an example.
+
+### Command + Handler
+Let’s start by creating a command and his handler. In this case, we’re using UUIDs for identifying the resources so IDs are strings. This process will be asynchronous.
+```php
+<?php
+
+declare(strict_types=1);
+
+use App\Common\CQRS\Command;
+
+final class CreateShopCommand implements Command
+{
+    private string $id;
+    private string $name;
+    
+    public function __construct(string $id, string $name)
+    {
+        $this->id = $id;
+        $this->name = $name;
+    }
+    
+    public function id(): string
+    {
+        return $this->id;
+    }
+    
+    public function name(): string
+    {
+        return $this->name;
+    }
+}
+```
+That’s simple, huh? Now it’s time to create a handler of this command.
+```php
+<?php
+
+declare(strict_types=1);
+
+use App\Common\CQRS\Command;
+use App\Common\CQRS\CommandHandler;
+
+final class CreateShopHandler implements CommandHandler
+{
+    private ShopFactory $shopFactory;
+    private Shops $shops;
+    
+    public function __construct(CompanyFactory $shopFactory, Shops $shops)
+    {
+        $this->shopFactory = $shopFactory;
+        $this->shops = $shops;
+    }
+    
+    public function __invoke(CreateShopCommand $command): void
+    {
+        if ($this->shops->existsWithName($command->name())) {
+            throw ShopNameTaken::withName($command->name());
+        }
+        
+        $shop = $this->shopFactory->create($command->id(), $command->name());
+        
+        $this->shops->add($shop);
+    }
+}
+```
+Suppose that we already have a shop factory class (`ShopFactory`), and the repository of shops (`Shops`). They aren’t covered in this article. The write-model realized by the Command+Handler is checking if the given shop name is unique and any other shop doesn’t exist with this name. If exists then we’re throwing an exception and discarding creating shop process ([here is can read more about raising exceptions](https://patryk.it/short-history-of-raising-errors)).

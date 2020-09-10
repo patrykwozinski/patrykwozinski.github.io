@@ -57,3 +57,52 @@ interface CommandHandler
 ```
 
 **Command** and **CommandHandler** are just empty interfaces that are defining functionalities. **CommandBus** interface is a place where the DI lives. Thanks to this we can in simply way invert the dependencies. After all, we have an implementation that is using the Messenger component. **Remember: you should NEVER use directly the Messenger implementation of the CommandBus.**
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Common\CQRS;
+
+use Symfony\Component\Messenger\MessageBusInterface;
+
+final class MessengerCommandBus implements CommandBus
+{
+    private MessageBusInterface $commandBus;
+
+    public function __construct(MessageBusInterface $commandBus)
+    {
+        $this->commandBus = $commandBus;
+    }
+
+    public function dispatch(Command $command): void
+    {
+        $this->commandBus->dispatch($command);
+    }
+}
+```
+
+As you see the name of the `MessageBusInterface` parameter is `commandBus` — it covers the dedicated bus to handle your command messages. We’ll cover this topic later.
+
+
+### Query building blocks
+Yeah! We already have a “C” from CQRS done. It’s time to prepare some queries. To do this we need another three interfaces — very similar to the above.
+```php
+<?php
+
+declare(strict_types=1);
+
+interface Query
+{
+}
+
+interface QueryBus
+{
+    /** @return mixed */
+    public function handle(Query $query);
+}
+
+interface QueryHandler
+{
+}
+```

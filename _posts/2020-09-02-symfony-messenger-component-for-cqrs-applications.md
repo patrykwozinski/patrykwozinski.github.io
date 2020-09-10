@@ -137,3 +137,5 @@ final class MessengerQueryBus implements QueryBus
 ```
 
 Do you see **differences between QueryBus and CommandBus implementations**? In a `MessengerQueryBus`, I’ve used `HandleTrait` because as default, buses are not returning results and this trait just makes easier fetching results from the buses. I hate that in the PHP we don’t have generic types so creating QueryBuses would be much more elegant. Meh, just dreams. In the real world, we just need to define `mixed` return type in a docblock.
+
+## What about a configuration?

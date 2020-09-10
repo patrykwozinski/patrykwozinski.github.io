@@ -82,7 +82,7 @@ final class MessengerCommandBus implements CommandBus
 }
 ```
 
-As you see the name of the `MessageBusInterface` parameter is `commandBus` — it covers the dedicated bus to handle your command messages. We’ll cover this topic later.
+As you see the name of the `MessageBusInterface` parameter is `$commandBus` — it covers the dedicated bus to handle your command messages. We’ll cover this topic later.
 
 
 ### Query building blocks
@@ -106,3 +106,4 @@ interface QueryHandler
 {
 }
 ```
+**Query** and **QueryHandler** are without any declared methods. And **QueryBus** is similar to CommandBus - place where is the point of dependency inversion and abstraction of Messenger. Another reminder — **don’t use directly the Messenger implementation of QueryBus, do it only via QueryBus interface**. Look at the MessageBusInterface parameter — the name is `$queryBus` because it indicates name of the bus (`query.bus`).

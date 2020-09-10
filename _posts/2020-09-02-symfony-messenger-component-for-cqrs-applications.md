@@ -19,3 +19,17 @@ I recommended you to read **Martin Fowler’s** [post](https://martinfowler.com/
 Of course, you can “do CQRS” using separate databases per write/read model or either different database systems per write/read. Remember — that’s unnecessary in all the cases. Please treat CQRS as a tool. It’s just a hammer, and you’re deciding if it needs a wood grip or steel is enough.
 
 At the point — in this post, I’d like to describe how I’m managing the configuration of the **Symfony Messenger** component to work with a pure CQRS system.
+
+<p align="center">
+    <img src="https://miro.medium.com/max/1000/1*EfLEyiTbsz5J_eVJ6ngokg.png" alt="Coffee"/>
+</p>
+
+## Some abstraction of Messenger is always welcome
+You know, using directly Symfony components it’s not the best approach that you can find. When I’m starting from scratch with a new project — I’m just creating a thin layer between my application code and the infrastructure elements like Symfony Messenger or any other dependency. That’s just a good habit to have dependency inverted (using some small abstraction) in places like this one.
+
+Let’s start from including new dependency of our application via composer simply running the following command:
+```sh
+composer require messenger
+```
+
+

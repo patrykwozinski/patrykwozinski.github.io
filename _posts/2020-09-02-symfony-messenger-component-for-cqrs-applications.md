@@ -268,3 +268,120 @@ final class CreateShopHandler implements CommandHandler
 }
 ```
 Suppose that we already have a shop factory class (`ShopFactory`), and the repository of shops (`Shops`). They aren’t covered in this article. The write-model realized by the Command+Handler is checking if the given shop name is unique and any other shop doesn’t exist with this name. If exists then we’re throwing an exception and discarding creating shop process ([here is can read more about raising exceptions](https://patryk.it/short-history-of-raising-errors)).
+
+### Query + Handler
+As you see — we have our write-model done. Let’s consider creating a read-model for use in controllers, validators, forms, etc. Maybe you remember what you have read a few seconds before: we’re throwing an exception when the given shop name is already taken. **We don’t want to face users with this exception moreover we need to do a pre-check before dispatching the command**. Ah, okay — this command is processed asynchronous so the user’s experience would be a false-positive because he wouldn’t see any warning, error, problem — **nothing**! That’s another reason to create a read-model and give the user a satisfying experience with nice information about failed action. Look!
+```php
+<?php
+
+declare(strict_types=1);
+
+use App\Common\CQRS\Query;
+
+final class ShopExistsWithNameQuery implements Query
+{
+    private string $name;
+    
+    public function __construct(string $name)
+    {
+        $this->name = $name;
+    }
+    
+    public function name(): string
+    {
+        return $this->name;
+    }
+}
+```
+And now look at the query handler. The class name can be strange to you. Prefix DoctrineDBAL means the implementation is provided using Doctrine ORM connection. This class should be placed with the other infrastructural parts of your system in a path similar to `src/Shops/Infrastructure/Doctrine/DBAL/Query/DoctrineDBALShopExistsWithNameHandler`. So long name, and I’m not a Java dev. 😅
+```php
+<?php
+
+declare(strict_types=1);
+
+use App\Common\CQRS\QueryHandler;
+
+final class DoctrineDBALShopExistsWithNameHandler implements QueryHandler
+{
+    private Connection $connection;
+    
+    public function __construct(Connection $connection) // Let's assume that's doctrine connection
+    {
+        $this->connection = $connection;
+    }
+    
+    public function __invoke(ShopExistsWithNameQuery $query): bool
+    {
+        /** @var ResultStatement $statement */
+        $statement = $this->connection
+            ->createQueryBuilder()
+            ->select([
+                '1',
+            ])
+            ->from('shop', 's')
+            ->where('s.name = :name')
+            ->setParameter('name', $query->name())
+            ->execute();
+
+        return !empty($statement->fetch(FetchMode::ASSOCIATIVE));
+    }
+}
+```
+
+Another way to implement a query handler is to create an abstraction of the connection. I think that’s an unnecessary level of abstraction in this case and your query-handler will just forward the parameter to it so **it’s an anti-pattern in the terms of modular programming** (shallow method). This way may create god-classes like repositories that are cover n-cases. The first solution (from the above example) has pros like **ONE query** for **ONE implementation** of **ONE business-case query**.
+
+## Yaaay! We have implemented simple CQRS — let’s use it!
+Let’s presume that we have a controller that is using our newly created functionalities. We want to create a shop with a specific name. In the first step, we need to do input validation (**name cannot be empty and must be strict**) and then business validation (**shop name is unique**).
+
+Maybe I will just show my simple implementation?
+```php
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+
+final class CreateShopController extends AbstractController
+{
+    private QueryBus $queryBus;
+    private CommandBus $commandBus;
+    
+    public function __construct(QueryBus $queryBus, CommandBus $commandBus)
+    {
+        $this->queryBus = $queryBus;
+        $this->commandBus = $commandBus;
+    }
+    
+    public function __invoke(Request $request): JsonResponse
+    {
+        $name = (string) $request->get('name');
+        
+        if (empty($name)) {
+            return new JsonResponsee([
+                'error' => 'shop \'name\' can not be empty',
+            ], JsonResponse::HTTP_BAD_REQUEST);
+        }
+        
+        if ($this->shopWithNameExists($name)) {
+            return new JsonResponse([
+                'error' => 'given shop name is already taken',
+            ], JsonResponse::HTTP_CONFLICT);
+        }
+        
+        $command = new CreateShop('id', $name);
+        $this->commandBus->dispatch($command);
+        
+        return new JsonResponse([
+            'status' => 'Shop creating started!',
+            'shop_id' => $command->id(),
+        ], JsonResponse::HTTP_ACCEPTED);
+    }
+    
+    private function shopWithNameExists(string $name): bool
+    {
+        return $this->queryBus->handle(new ShopExistsWithNameQuery($name));
+    }
+}
+```

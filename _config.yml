@@ -97,7 +97,7 @@ url-pretty: "patryk.it"  # eg. "deanattali.com/beautiful-jekyll"
 
 # Google Tag Manager ID
 gtm: "GTM-N2RT6P6"
-gtag: "G-1GL2M9CBT8"
+gtag: "UA-175223083-1"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls

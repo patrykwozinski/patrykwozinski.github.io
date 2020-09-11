@@ -17,7 +17,7 @@ To genialne urządzenie sprawiło, że zacząłem pochłaniać zdecydowanie wię
 Gorąco polecam spróbować przygody z e-bookami jeżeli jeszcze nie daliście im szansy.
 
 <p align="center">
-    <img src="https://miro.medium.com/max/1000/1*piYV1KdWpzC1JyEtOcK-pA@2x.jpeg" alt="Time"/>
+    <img src="/img/blog/ksiazkowa-polowa.jpg" alt="Books"/>
 </p>
 
 ## Jakie typy książek?

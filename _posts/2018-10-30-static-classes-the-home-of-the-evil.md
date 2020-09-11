@@ -10,7 +10,7 @@ comments: true
 First, static classes don’t really tell us how they work and what dependencies they have. We’re never sure what they’re hiding inside. Second, don’t they remind you of the procedural approach to programming? Exactly! And we want to be ‘object thinking’ like David West, don’t we?! In fact, static classes will never be objects, because we don’t create them. They simply operate on the data that we pass to the methods, then they follow the instructions. Another problem is the fact that static methods hide dependencies between individual objects. We find out about the use of other classes only by looking deeply at the implementations in which they were used; we’re not able to find out about them by looking at the constructor itself. The problem grows with increased cyclomatic complexity of our static methods, because we have no idea what will happen somewhere in the depths of our hidden dependence.
 
 <p align="center">
-    <img src="https://miro.medium.com/max/700/0*t5oipwpTCYh53MFy" alt="The programmer"/>
+    <img src="/img/blog/static-classes-home-of-evil.jpg" alt="The programmer"/>
 </p>
 
 ### And what about auxiliary classes, helpers and other utils?

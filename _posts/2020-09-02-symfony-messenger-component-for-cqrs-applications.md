@@ -20,7 +20,7 @@ Of course, you can “do CQRS” using separate databases per write/read model o
 At the point — in this post, I’d like to describe how I’m managing the configuration of the **Symfony Messenger** component to work with a pure CQRS system.
 
 <p align="center">
-    <img src="https://miro.medium.com/max/1000/1*EfLEyiTbsz5J_eVJ6ngokg.png" alt="Coffee"/>
+    <img src="/img/blog/symfony-messenger-component.jpg" alt="Coffee"/>
 </p>
 
 ## Some abstraction of Messenger is always welcome

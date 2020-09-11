@@ -5,6 +5,7 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [performance, optimization]
 comments: true
+share-img: "/img/blog/jak-optymalizowac-1.jpg"
 ---
 
 Hej! Chciałbym w tym wpisie poruszyć temat optymalizacji naszych ukochanych aplikacji. Większość porad może znaleźć tutaj odzwierciedlenie jedynie w web aplikacjach, ale w dalszym ciągu zachęcam do lektury. Nie wiem jak Wy, ale ja lubię gdy strony WWW działają szybko – na tyle szybko, abym nie musiał rozmyślać nad losami świata pomiędzy ładowaniem kolejnych podstron. Sposobów optymalizacji, podejść do optymalizacji mamy tutaj nieskończoność. Niektóre oczywiście są lepsze – inne gorsze. Jeżeli mnie nuda nie zabije, to powstanie tutaj **seria wpisów** związanych z tym ciekawym tematem w oparciu o moje doświadczenia i historie z którymi się spotkałem w ostatnim czasie.

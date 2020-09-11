@@ -5,7 +5,6 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [oop, good practices]
 comments: true
-thumbnail-img: "/img/blog/static-classes-home-of-evil.jpg"
 share-img: "/img/blog/static-classes-home-of-evil.jpg"
 ---
 

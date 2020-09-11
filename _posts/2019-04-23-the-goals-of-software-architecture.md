@@ -5,6 +5,7 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [software architecture]
 comments: true
+share-img: "/img/blog/goals-of-software-architecture.jpg"
 ---
 
 ## The purpose of software architecture
@@ -13,6 +14,10 @@ Hello! Nice to see you reading my next short article on Medium. This time I will
 > “Whatever it is, I see it as a network of microservices! Necessarily with Kafka and MongoDB! “- Sebastian, senior developer at X .
 
 Ok then, we can create our new functionalities in the form of microservices, actually — we can do the same with old ones that are a nuisance because keeping them costs one hundred times more than writing new lines of code. Let us now ask ourselves one incredibly important question: what is the purpose of implementing our new architecture?
+
+<p align="center">
+    <img src="/img/blog/goals-of-software-architecture.jpg" alt="Software architecture goals"/>
+</p>
 
 ## What is the goal of architecture in the context of our system?
 When making design decisions, we face very serious problems that are related to the selection of architectural solutions. Their choice should be primarily based on the goal — that is something that we are able to obtain by implementing a new solution.

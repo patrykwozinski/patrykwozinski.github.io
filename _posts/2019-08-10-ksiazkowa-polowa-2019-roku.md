@@ -5,6 +5,7 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [knowledge sharing]
 comments: true
+share-img: "/img/blog/ksiazkowa-polowa.jpg"
 ---
 
 Cześć, chciałbym podzielić się z Wami moimi opiniami na temat książek, które przeczytałem w tych kilku miesiącach 2019 roku. Nie było ich jakoś niesamowicie dużo, ale wydaje mi się, że parę fajnych pozycji udało mi się zaliczyć i oznaczyć jako przeczytane na moim Kindlu. Tak naprawdę to tylko kilka książek, które przeczytałem od lutego/marca, ale wydaje mi się, że to odpowiedni moment na tego typu podsumowanie; nazwijmy je podsumowaniem półrocznym.

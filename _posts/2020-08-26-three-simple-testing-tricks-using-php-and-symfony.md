@@ -5,6 +5,7 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [testing, symfony, php]
 comments: true
+share-img: /img/blog/three-symfony-testing-tricks.jpg
 ---
 
 Hi! I’ve written this post to help you and keep in history something that makes application testing easier. The first two tricks are related to the **PHP Symfony** web framework and functional/integration testing in this framework, but the second one is a pattern that every PHP engineer should know. You can treat this article as a note created for me from the past.

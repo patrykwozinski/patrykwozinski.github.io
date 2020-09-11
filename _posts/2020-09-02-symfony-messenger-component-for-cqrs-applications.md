@@ -5,6 +5,7 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [php, symfony, cqrs, software architecture]
 comments: true
+share-img: "/img/blog/symfony-messenger-component.jpg"
 ---
 
 Hi there! This article is mostly for people who, like me some time ago, are looking for information on how to configure Messenger for applications based on **CQRS architectural pattern**. To be honest, Messenger is my favorite SF component.

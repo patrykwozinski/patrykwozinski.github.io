@@ -5,6 +5,7 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [junior, good practices, refactoring]
 comments: true
+share-img: "/img/blog/good-practices-junior.jpg"
 ---
 
 What are good practices? These are solutions that have been proven to work many times by people who have been programming longer than some of us live. People who cut their teeth on Cobol burst out laughing when they see the next NullPointerException and write more CRUDs than we can imagine — they know perfectly well what rules and habits are able to facilitate our work. Books written by legends that refer to the principles of object-oriented programming, which already dominated in the ’80s, are timeless and reading them can really make us better programmers/engineers.

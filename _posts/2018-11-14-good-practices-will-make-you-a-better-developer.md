@@ -12,7 +12,7 @@ What are good practices? These are solutions that have been proven to work many 
 > I’m not a great programmer; I’m a good programmer with great habits. – Kent Beck
 
 <p align="center">
-    <img src="https://miro.medium.com/max/700/0*frTvs-_mPMuG2yZU" alt="The programmer"/>
+    <img src="/img/blog/good-practices-junior.jpg" alt="The programmer"/>
 </p>
 
 In this story I will discuss the cool practices related to both programming and soft skills that are worth developing and improving.

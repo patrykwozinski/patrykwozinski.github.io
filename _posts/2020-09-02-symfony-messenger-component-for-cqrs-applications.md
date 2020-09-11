@@ -3,7 +3,7 @@ layout: post
 title: Symfony Messenger component for CQRS applications
 gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
-tags: [php, symfony, cqrs]
+tags: [php, symfony, cqrs, software architecture]
 comments: true
 ---
 

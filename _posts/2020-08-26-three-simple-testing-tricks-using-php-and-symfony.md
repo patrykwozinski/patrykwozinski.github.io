@@ -10,7 +10,7 @@ comments: true
 Hi! I’ve written this post to help you and keep in history something that makes application testing easier. The first two tricks are related to the **PHP Symfony** web framework and functional/integration testing in this framework, but the second one is a pattern that every PHP engineer should know. You can treat this article as a note created for me from the past.
 
 <p align="center">
-    <img src="https://cdn-images-1.medium.com/max/1200/1*ft2R-xkv0KzrRRfPfDkQhw.png" alt="Disk"/>
+    <img src="/img/blog/three-symfony-testing-tricks.jpg" alt="Disk"/>
 </p>
 
 ---

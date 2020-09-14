@@ -24,7 +24,7 @@ description: "Technology related blog. It's about the performance, software arch
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Fanpage: "https://www.facebook.com/patryk.it"
+  Follow me: "https://www.facebook.com/patryk.it"
   Resources:
     - LinkedIn: "https://www.linkedin.com/in/patrykwozinski/"
     - GoodReads: "https://www.goodreads.com/user/show/97289234-patryk-wozi-ski"

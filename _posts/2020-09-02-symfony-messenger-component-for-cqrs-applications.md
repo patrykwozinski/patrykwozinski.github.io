@@ -293,7 +293,7 @@ final class ShopExistsWithNameQuery implements Query
     }
 }
 ```
-And now look at the query handler. The class name can be strange to you. Prefix DoctrineDBAL means the implementation is provided using Doctrine ORM connection. This class should be placed with the other infrastructural parts of your system in a path similar to `src/Shops/Infrastructure/Doctrine/DBAL/Query/DoctrineDBALShopExistsWithNameHandler`. So long name, and I’m not a Java dev. 😅
+And now look at the query handler. The class name can be strange to you. Prefix DoctrineDBAL means the implementation is provided using Doctrine ORM connection. This class should be placed with the other infrastructural parts of your system in a path similar to `src/Shops/Infrastructure/Doctrine/DBAL/ Query/DoctrineDBALShopExistsWithNameHandler`. So long name, and I’m not a Java dev. 😅
 ```php
 <?php
 

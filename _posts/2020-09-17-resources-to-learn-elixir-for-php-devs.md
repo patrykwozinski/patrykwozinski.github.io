@@ -38,7 +38,7 @@ Metaprogramming is the next thing that we don’t have experience in PHP languag
 
 ### Pattern matching
 One of my favorite things in this language is pattern matching. This language construction enables us to write clean, simple code without tons of if-statements. Of course, pattern matching has tons of other advantages. Check it out!
-- [Pattern Matching in Elixir](https://dev.to/flatironschool/pattern-matching-in-elixir-33m1)
+- [Pattern Matching in Elixir - DEV.to](https://dev.to/flatironschool/pattern-matching-in-elixir-33m1)
 - [Elixir Pattern Matching - WomanOnRails](https://womanonrails.com/elixir-pattern-matching)
 
 ## Hey you! Share us your resources :)

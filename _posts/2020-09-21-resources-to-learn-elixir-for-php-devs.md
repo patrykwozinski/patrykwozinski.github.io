@@ -42,4 +42,4 @@ One of my favorite things in this language is pattern matching. This language co
 - [Elixir Pattern Matching - WomanOnRails](https://womanonrails.com/elixir-pattern-matching)
 
 ## Hey you! Share us your resources :)
-If you're reading this and do you think I omitted any important learning materials - send them in a comment to this post. I think it will be useful for many of us.
+If you're reading this and do you think I omitted any important learning materials - send them in a comment to this post. Another way is to add them directly to the page via [Pull Request to the post](https://github.com/patrykwozinski/patrykwozinski.github.io/blob/master/_posts/2020-09-17-resources-to-learn-elixir-for-php-devs.md). I think it will be useful for many of us.

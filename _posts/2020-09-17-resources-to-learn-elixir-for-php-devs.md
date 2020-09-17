@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resources to learn Elixir for PHP developers
+title: Resources to learn Elixir for PHP devs
 gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [php, elixir, knowledge sharing, from-php-to-elixir, fp]

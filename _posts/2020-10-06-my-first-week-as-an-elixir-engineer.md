@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Elixir - first week
+title: My first week as an Elixir Engineer
 gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [elixir, knowledge sharing, from-php-to-elixir, fp]

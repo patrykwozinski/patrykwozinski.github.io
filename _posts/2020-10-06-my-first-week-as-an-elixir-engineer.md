@@ -15,7 +15,7 @@ Finally, I am working as an Elixir Engineer at Zenloop. That’s a company focus
     <img src="/img/blog/alchemy-3.jpg" alt="Alchemy"/>
 </p>
 
-I’m still while onboarding process, but thanks to my buddy I have the first real Elixir task. A few days ago I got a task to do research of libraries that supports parsing CSV and XLSX files. That's so generic thing to do in mainstream programming languages like Java, Python, or PHP but in this case, it was not obvious. I found a few packages on the Hexdocks (that's like packaging for PHP, but it's even better) - few of them were not looking stable for me or had not the best support from the creators. That's important when you're looking for a tool for professional usage - not for a home project.
+I’m still while onboarding process, but thanks to my buddy I have the first real Elixir task. A few days ago I got a task to do research of libraries that supports parsing CSV and XLSX documents. That's so generic thing to do in mainstream programming languages like Java, Python, or PHP but in this case, it was not obvious. I found a few packages on the Hexdocks (that's like packaging for PHP, but it's even better) - few of them were not looking stable for me or had not the best support from the creators. That's important when you're looking for a tool for professional usage - not for a home project.
 
 In my case, I’ve needed tools that help me to define the encoding of the given file and something that could guess which delimiter for the CSV file was used. There is no package, library, or tool that meets my requirements exists in the Elixir ecosystem and I’ve needed to create them from the scratch. I feel sad.
 

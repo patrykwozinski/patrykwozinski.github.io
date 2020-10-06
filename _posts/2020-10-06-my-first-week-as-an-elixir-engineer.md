@@ -9,7 +9,7 @@ share-img: "/img/blog/alchemy-3.jpg"
 ---
 
 Hi guys!
-Finally, I am working as an Elixir Engineer at Zenloop. That’s a company focused on the customer experience where Elixir is a primary programming language. After my first week of work, I can say one important thing: the elixir ecosystem is not mature, many times you’ll not find packages or libraries that can pass your expectations.
+Finally, I am working as an Elixir Engineer at Zenloop. That’s a company focused on the customer experience where Elixir is a primary programming language. After my first week of work, I can say one important thing: the elixir ecosystem is not mature. Many times you’ll not find packages or libraries that can pass your expectations and you will be forced to create them from the scratch.
 
 <p align="center">
     <img src="/img/blog/alchemy-3.jpg" alt="Alchemy"/>

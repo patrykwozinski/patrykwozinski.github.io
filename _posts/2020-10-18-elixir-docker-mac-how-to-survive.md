@@ -18,3 +18,6 @@ I don't want to present myself as an expert in this topic so the best would be i
 ## Ok, so what should I do?
 ### Use Docker Edge
 The first one thing that you could do is to use Docker Edge for Mac - not the stable version. I know - it doesn't sound amazing, but please trust me - it will speed up your environment. Edge version uses gRPC-FUSE as default and that's the magic which improves the performance.
+
+### Prepare your Docker settings
+There you have a few things to do in your Docker's settings. The first one is to increase resources.

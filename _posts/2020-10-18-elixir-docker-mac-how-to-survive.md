@@ -25,3 +25,6 @@ There you have a few things to do in your Docker's settings. The first one is to
 
 ### Share only necessary resources
 You know, sharing too many directories with your Docker machine is not the best idea if you need to improve the performance.
+
+### Use Mutagen.io
+Mutagen.io is a great tool that would speed up files synchronization between the host (your computer) and the container (docker).

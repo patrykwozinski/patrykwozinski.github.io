@@ -1,3 +1,5 @@
+
+
 Ayo!
 This blog post is not about my journey from PHP to Elixir engineering role. Today I want to cover topic of keeping the maximum possible level of happiness and developer eXperience in your company. If you think it’s easier and better to let people go out - just skip this article and watch some cat-gifs, it’s your choice. :)
 

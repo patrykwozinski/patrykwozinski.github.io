@@ -11,7 +11,7 @@ share-img: "/img/blog/alchemy-4.jpg"
 ## Let's talk about the Docker on Mac
 Maybe you were thinking about using Docker for your development, but... meh, it doesn't work as you want on MacOS. It's so slow and really hurts when you're trying to compile application. I know that - I had the same before when I was creating applications using PHP language. Okay, let's start from the beginning - what is that pain in the ass?
 
-### Why the Docker is so slow used on MacOS?
+### Why the Docker is so slow with MacOS?
 I don't want to present myself as an expert in this topic so the best would be if I just put there the best description that I found.
 <description why it's slow>
 

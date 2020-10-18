@@ -13,3 +13,8 @@ Maybe you were thinking about using Docker for your development, but... meh, it 
 
 ### Why the Docker is so slow used on MacOS?
 I don't want to present myself as an expert in this topic so the best would be if I just put there the best description that I found.
+<description why it's slow>
+
+## Ok, so what should I do?
+### Use Docker Edge
+The first one thing that you could do is to use Docker Edge for Mac - not the stable version. I know - it doesn't sound amazing, but please trust me - it will speed up your environment.

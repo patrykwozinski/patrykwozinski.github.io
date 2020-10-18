@@ -16,8 +16,12 @@ I don't want to present myself as an expert in this topic so the best would be i
 <description why it's slow>
 
 ## Ok, so what should I do?
+
 ### Use Docker Edge
 The first one thing that you could do is to use Docker Edge for Mac - not the stable version. I know - it doesn't sound amazing, but please trust me - it will speed up your environment. Edge version uses gRPC-FUSE as default and that's the magic which improves the performance.
 
 ### Prepare your Docker settings
 There you have a few things to do in your Docker's settings. The first one is to increase resources. Probably you need more CPUs and more RAM dedicated to your application. Of course it depends on the size of your project, but let's guess it's something bigger than simple CMS system. ;)
+
+### Share only necessary resources
+You know, sharing too many directories with your Docker machine is not the best idea if you need to improve the performance.

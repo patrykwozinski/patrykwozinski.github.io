@@ -1,9 +1,9 @@
 ---
 layout: post
-title: My first week as an Elixir Engineer
+title: Developer Experience in practice
 gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
-tags: [elixir, knowledge sharing, from-php-to-elixir, fp]
+tags: [developer experience, career, work environment]
 comments: true
 share-img: "/img/blog/developer-experience.jpg"
 ---

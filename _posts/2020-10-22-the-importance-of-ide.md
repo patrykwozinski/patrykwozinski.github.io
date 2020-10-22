@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My first week as an Elixir Engineer
+title: The importance of IDE
 gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [elixir, from-php-to-elixir, ide, tools]
@@ -8,8 +8,7 @@ comments: true
 share-img: "/img/blog/alchemy-4.jpg"
 ---
 
-# Elixir coding tools
-Hi! I was trying to write something about Elixir for the last week, but... you know what will happen if you found a new IDE and trying to customize everything to be so useful for yourself. So! I have wasted about 5-8 hours configuring my code editor only for writing. Thanks to this I can give you this story. Enjoy reading!
+Hi! I was trying to write something about Elixir for the last week, but... you know what will happen if you found a new IDE and trying to customize everything to be so useful for yourself. So! I have wasted about 6 hours configuring my code editor. I'm just a master of procrastination. Thanks to this - I can give you this story. Enjoy reading!
 
 <p align="center">
     <img src="/img/blog/alchemy-4.jpg" alt="IDE Elixir configure"/>

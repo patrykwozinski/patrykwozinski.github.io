@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The importance of IDE
+title: The importance of code editors
 gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [elixir, from-php-to-elixir, ide, tools]

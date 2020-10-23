@@ -20,7 +20,9 @@ I love to share knowledge and learn new things with others. I have experience in
 ## My experience
 <hr>
 
-- [DocPlanner](https://www.docplanner.com/about-us) - **Senior Software Engineer** <small>(02.2018 - now)</small>
+- [zenloop](https://www.zenloop.com/en) - **Elixir Engineer** <small>(09.2020 - now)</small>
+
+- [DocPlanner](https://www.docplanner.com/about-us) - **Senior Software Engineer** <small>(02.2018 - 09.2020)</small>
 
 - [NetInteractive](https://netinteractive.pl) - **PHP Developer** <small>(12.2017 - 03.2018)</small>
 

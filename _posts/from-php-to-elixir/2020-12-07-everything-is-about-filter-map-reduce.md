@@ -27,6 +27,6 @@ After everything, you would like to mix all these things into a tasty salad. How
 prepared_vegetables |> reduce(&mix/2)
 ```
 
-So... As you see the most important is to understand operations like **filter**, **map**, and **reduce**. Look - we’ve never worried about the state or something - the only significant operations are input transformations. Of course, functional programming has tons of academic terms but you don’t need them to start your journey with FP!
+So... As you see the most important is to understand operations like **filter**, **map**, and **reduce**. Look - we’ve never worried about the state or something - the only significant operations are input transformations. Of course, **functional programming also has tons of academic terms** but you don’t need them to start your journey with FP!
 
 I wrote this post as a short note for myself from the future. I hope I’ll find more motivation to write something more technical in the near time.

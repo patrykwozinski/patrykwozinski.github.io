@@ -16,6 +16,10 @@ In object-oriented languages, we think about the data encapsulated in the object
 
 In functional programming, **there is no more data in the heart of the problem**. There you need to think about the problem as to **how to transform something** into a different thing. 
 
+<p align="center">
+    <img src="/img/blog/alchemy-5.jpg" alt="Functional approach to a salad"/>
+</p>
+
 Let's assume you’re working on an application where the main problem is to prepare a salad for your family. You have a few vegetables like tomato, cucumber, and red pepper. At first, you need to peel the cucumber. So... How to do that? You need to filter vegetables (you don't want to peel the pepper, trust me) to find cucumber, map it to take off the skin. Viola! The cucumber has been peeled! The code could look like below:
 ```elixir
 vegetables |> filter(cucumber) |> map(&peel/1)

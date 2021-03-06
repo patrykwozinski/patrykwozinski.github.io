@@ -20,7 +20,9 @@ I love to share knowledge and learn new things with others. I have experience in
 ## My experience
 <hr>
 
-- [zenloop](https://www.zenloop.com/en) - **Elixir Engineer** <small>(09.2020 - now)</small>
+- [Fresha](https://fresha.engineering) - **Backend Engineer** <small>(09.2020 - 02.2021)</small>
+
+- [zenloop](https://www.zenloop.com/en) - **Elixir Engineer** <small>(09.2020 - 02.2021)</small>
 
 - [DocPlanner](https://www.docplanner.com/about-us) - **Senior Software Engineer** <small>(02.2018 - 09.2020)</small>
 

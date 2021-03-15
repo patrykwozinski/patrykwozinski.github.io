@@ -20,7 +20,7 @@ I love to share knowledge and learn new things with others. I have experience in
 ## My experience
 <hr>
 
-- [Fresha](https://fresha.engineering) - **Backend Engineer** <small>(09.2020 - 02.2021)</small>
+- [Fresha](https://fresha.engineering) - **Backend Engineer** <small>(03.2021 - now)</small>
 
 - [zenloop](https://www.zenloop.com/en) - **Elixir Engineer** <small>(09.2020 - 02.2021)</small>
 

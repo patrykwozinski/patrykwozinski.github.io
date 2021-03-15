@@ -39,6 +39,19 @@ Thanks to this people who are reviewing your code can do it step by step going d
 
 Okay, so you've merged all the changes on the specific level of abstraction into your main task branch and now it's time to go to the production. That's also an amazing time to merge using squash because you still need to hide implementation details from the future code-readers. Every change you did is important but especially for you and code reviewers at this moment. If people from the future need more information about your changes they should check your Pull Request and what was happened there on the specific level of abstraction. In this situation, they also might go deeper into the sub-pull-requests of your subtasks.
 
+* [Feature] Add opinion #**main-pullrequest**
+  * Create an API of adding opinions #**creating-api-pull-request**
+    * Api tests (failing) #**commit**
+    * Stub implementation #**commit**
+    * Fix for parameter #**commit**
+  * Dummy implementation of adding API #**dummy-implementation-pull-request**
+    * Implement the most simple version of API #**commit**
+    * Fix XYZ #**commit**
+  * Implement database adapters for API #**db-adapters-pull-request**
+    * Install Hibernate library to use database #**commit**
+    * Integration tests of adapters #**commit**
+    * Hibernate implementation of entities #**commit**
+
 This approach to working with git could maximize the productivity of your team, future code readers, and also it's a huge help for code reviewers so thanks to this the work can be much more enjoyable. Remember: your code is an implementation detail - your **commit names can show higher-level decisions**. That's a huge gain for Developer Experience in my opinion!
 
 I'm still practicing this approach and learning how to decrease cognitive load when working with git. I hope you enjoyed this post, have a great week!

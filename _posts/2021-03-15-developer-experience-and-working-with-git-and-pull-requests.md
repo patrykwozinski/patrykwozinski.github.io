@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Less cognitive load when working with git
+title: Less cognitive load when working with git and pull requests
 gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [git, version control, developer experience]

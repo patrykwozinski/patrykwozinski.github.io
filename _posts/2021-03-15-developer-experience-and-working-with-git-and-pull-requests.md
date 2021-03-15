@@ -24,7 +24,7 @@ At first, let's talk about the commits - how to split them and how to cover in m
 <li>As you see I'm a fan of the top-to-the-bottom approach in software engineering.</li>
 </ul>
 
-Let's make the new branch from the main development (master or develop - up to your company's process) for a whole epic like `add-doctor-opinion`. Every subtask of this issue should be committed separately. If it's a bigger thing to do - just create a branch from your task branch. Just treat branches as a possibility to hiding implementation details - it's like an encapsulation of the knowledge in programming. If your sub-branch is ready to merge - every commit should represent something important at this level of abstraction. In our example those commits could look like:
+Let's make the new branch from the main development (master or develop - up to your company's process) for a whole epic like `add-doctor-opinion`. Every subtask of this issue should be committed separately. If it's a bigger thing to do - just create a branch from your task branch. Just treat branches as a possibility to hiding implementation details - it's like an encapsulation of the knowledge in programming. If your sub-branch is ready to merge - every commit should represent something important at a specific level of abstraction. In our example those commits could look like:
 <ul>
 <li>API tests to cover business needs</li>
 <li>Lightweight implementation of the API</li>

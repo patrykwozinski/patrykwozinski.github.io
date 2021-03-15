@@ -16,7 +16,7 @@ Hi! After a long time, I'd like to share with you one of my thoughts. Pull Reque
 
 But... I think it's not that easy as we think, there is one interesting thing that I've considered in the last few days. What's your approach to creating commits and merging? Have you ever thought about it? What's the logic behind your commits and decision about how to merge -> using squash or not? That's the topic that I'd like to cover today! :)
 
-At first, let's talk about the commits - how to split them and how to cover in my opinion the best way to present changes in your code. If you're starting with a task -> let's say you want to cover the task like "New feature request: adding an opinion about the doctor". It's huge to do on this topic, that's sure. Let's stick for a moment in this place. It's worth dividing this issue into a few smaller and treat the topic as epic. After some time we could discover subtasks there like:
+At first, let's talk about the commits - how to split them? I'll show you in my opinion the best way to present changes in your code. If you're starting with a task -> let's say you want to cover the task like **"New feature request: adding an opinion about the doctor"**. It's huge to do on this topic, that's sure. Let's stick for a moment in this place. It's worth dividing this issue into a few smaller and treat the topic as epic. After some time we could discover subtasks there like:
 <ul>
 <li>create an API of this action</li>
 <li>prepare the mock implementation of higher-level components</li>

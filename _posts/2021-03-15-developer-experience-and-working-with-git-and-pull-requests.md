@@ -31,7 +31,7 @@ Let's make the new branch from the main development (master or develop - up to y
 <li>Fix XYZ in ABC</li>
 </ul>
 
-Thanks to this people who are reviewing your code can do it step by step going deeper by commits in implementation details and check your thinking way. If everything is ready and your team approves the code - merge using squash. I love squashing commits because it shows changes without knowledge leaks for the future coders. Of course - if they would need to know more - they can open your archived pull request and check all the commit-steps in your thinking process. Less cognitive load => happier coders **#devExperience**!
+Thanks to this people who are reviewing your code can do it step by step going deeper by commits in implementation details and check your thinking way. If everything is ready and your team approves the code - merge using squash. I love squashing commits because it shows changes without knowledge leaks for the future coders. Of course - if they would need to know more - they can open your archived pull request and check all the commit-steps in your thinking process. **Less cognitive load => happier coders** **#devExperience**!
 
 <p align="center">
     <img src="/img/blog/dx-and-working-with-git.gif" alt="Developer Experience and pull requests"/>

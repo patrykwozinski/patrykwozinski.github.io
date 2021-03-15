@@ -5,13 +5,13 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [git, version control, developer experience]
 comments: true
-share-img: "/img/blog/dx-and-working-with-git.jpg"
+share-img: "/img/blog/dx-and-working-with-git-small.jpg"
 ---
 
 Hi! After a long time, I'd like to share with you one of my thoughts. Pull Requests, Code Reviews, version control, and git - that's buzzwords with whom we are so familiar on daily software engineering work. That's of course not hard to commit some changes, push to the git repository and then open a pull request, true. After all, we're merging these changes to some branches like master or development, etc. - of course, it depends on your project's git-flow. Nothing interesting, that's the thing that we're teaching interns and juniors, yep.
 
 <p align="center">
-    <img src="/img/blog/dx-and-working-with-git.gif" alt="Developer Experience and Cognitive load"/>
+    <img src="/img/blog/dx-and-working-with-git.jpg" alt="Developer Experience and Cognitive load"/>
 </p>
 
 But... I think it's not that easy as we think, there is one interesting thing that I've considered in the last few days. What's your approach to creating commits and merging? Have you ever thought about it? What's the logic behind your commits and decision about how to merge -> using squash or not? That's the topic that I'd like to cover today! :)
@@ -27,6 +27,10 @@ API tests to cover business needs
 Lightweight implementation of the API
 Fix XYZ in ABC
 Thanks to this people who are reviewing your code can do it step by step going deeper by commits in implementation details and check your thinking way. If everything is ready and your team approves the code - merge using squash. I love squashing commits because it shows changes without knowledge leaks for the future coders. Of course - if they would need to know more - they can open your archived pull request and check all the commit-steps in your thinking process. Less cognitive load => happier coders #devExperience!
+
+<p align="center">
+    <img src="/img/blog/dx-and-working-with-git.gif" alt="Developer Experience and Cognitive load"/>
+</p>
 
 Okay, so you've merged all the changes on the specific level of abstraction into your main task branch and now it's time to go to the production. That's also an amazing time to merge using squash because you still need to hide implementation details from the future code-readers. Every change you did is important but especially for you and code reviewers at this moment - if people from the future need more information about your changes they should view your Pull Request and check what was happened here on the specific level of abstraction. In this situation, they also might go deeper into the sub-pull-requests of your subtasks.
 

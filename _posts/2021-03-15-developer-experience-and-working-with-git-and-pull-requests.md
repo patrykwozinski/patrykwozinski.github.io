@@ -8,7 +8,7 @@ comments: true
 share-img: "/img/blog/dx-and-working-with-git-small.jpg"
 ---
 
-Hi! After a long time, I'd like to share with you one of my thoughts. Pull Requests, Code Reviews, version control, and git - that's buzzwords with whom we are so familiar on daily software engineering work. That's of course not hard to commit some changes, push to the git repository and then open a pull request, true. After all, we're merging these changes to some branches like master or development, etc. - of course, it depends on your project's git-flow. Nothing interesting, that's the thing that we're teaching interns and juniors, yep.
+Hi! After a long time, I'd like to share with you one of my thoughts. Pull Requests, Code Reviews, version control, and git - that's buzzwords with whom we are so familiar on daily software engineering work. That's of course not hard to commit some changes, push to the git repository and then open a pull request, true. After all, we're merging these changes to main branch like master or development, etc. - of course, it depends on your project's git-flow. Nothing interesting, that's the thing that we're teaching interns and juniors, yep.
 
 <p align="center">
     <img src="/img/blog/dx-and-working-with-git.jpg" alt="Cognitive load when working with git"/>

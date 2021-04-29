@@ -28,3 +28,6 @@ What if we would like to do a refactoring of some CRUD-like module that is curre
 
 Okay, now - think about your side-project. Don't you think doing a DDD, BDD, TDD, Hype-Driven Development is not just a muda in many places of your system? Wouldn't it be easier to create solid walls between business boundaries and hide the implementation behind them? Think about Pareto Principle and about lean. You don't need to over-think the project to create something good that gives your clients true value. Create a model of your business - what will earn money and give a value and then - build the best possible model here but not better. Perfectionism is not your goal - your goal is to bring an amazing product to the people who need it.
 
+Software Engineering is not about creating shrines of clean code that would make Uncle Bob happier. For me - the best engineer should be described as a Product Engineer; not PHP Engineer nor C# engineer and even not a WordPress 5.7.1 Developer (xd).
+Take shortcuts where the road is flat (supporting domain) and climb with the best tools ever when you're fighting about your business (core domain). Zero waste software development? Yep, I'd name it like that.
+

@@ -5,12 +5,16 @@ gh-repo: patrykwozinski/patrykwozinski.github.io
 gh-badge: [follow]
 tags: [software craftsmanship, software architecture, essentialism]
 comments: true
-share-img: "/img/blog/essential-development-small.jpg"
+share-img: "/img/blog/essentialism-and-software-engineering-small.jpg"
 ---
 
 Hi after a long time! This time I'd like to present to you my short story about creating a side-project with my friends. Yep, I know that the title is a little click-baiting, but I want you to read this post.
 
 Let's start from the beginning - as I've mentioned I'm working on a side-project that is a SaaS application for a rent-car company. I know, I know - it's not rocket science, but we're trying to do the best experience both for our customers and... for us. We want to have an amazing developer experience level and ease of introducing new engineers to the project in the future. I'm nearly sure you have a graveyard of side-projects in your GitHub repositories - you're not alone. Most programmers can't finish projects because of over-engineering, over-thinking, over-...doing fancy stuff like tactical DDD, BDD, TDD, XDD instead of GETTING F***ING SHIT DONE. I was the same - I was doing an amazing architecture, clear, beauty code... but! The projects went away because I was exhausted from doing everything in a purist way. This time is different, seriously!
+
+<p align="center">
+    <img src="/img/blog/essentialism-and-software-engineering.jpg" alt="Essentialism, software engineering and zero waste"/>
+</p>
 
 We've started the project wanting to deliver an amazing product and also still learning some things meanwhile. It wasn't that easy because every step in the wrong direction may cause over-engineering. Okay, I've blamed DDD for some fails and yes, I keep this opinion, but it's related to tactical DDD - not strategic. The second one is brilliant, amazing, and my lovely approach to software engineering. So... yes, we did deep modeling of our domain, and we just wanted to understand how the business should work in the best possible way. Probably you get me now like an idiot that ignores amazing and powerful tools... but I am not. I love them but not when I need to deliver a new startup-like system.
 

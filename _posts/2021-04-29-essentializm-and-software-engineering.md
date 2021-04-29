@@ -35,4 +35,4 @@ Okay, now - think about your side-project. Don't you think doing a DDD, BDD, TDD
 Software Engineering is not about creating shrines of clean code that would make Uncle Bob happier. For me - the best engineer should be described as a Product Engineer; not PHP Engineer nor C# engineer and even not a WordPress 5.7.1 Developer (xd).
 Take shortcuts where the road is flat (supporting domain) and climb with the best tools ever when you're fighting about your business (core domain). Zero waste software development? Yep, I'd name it like that. **Essentialism is crucial**.
 
-Big thank you to Filip, Przemek, Daniel, and Darek with whom I'm creating this side-project. It's a great journey!
+Big thank you to [Filip](https://www.linkedin.com/in/nowackifilip/), [Przemek](https://www.linkedin.com/in/przemyslawrobak/), [Daniel](https://www.linkedin.com/in/danielkorytek/), and [Darek](https://www.linkedin.com/in/dariusz-krzanik-28a551128/) with whom I'm creating this side-project. It's a great journey!

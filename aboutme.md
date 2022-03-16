@@ -19,8 +19,9 @@ I love to share knowledge and learn new things with others. I have experience in
 <br>
 ## My experience
 <hr>
+- [DocPlanner](https://www.docplanner.com/about-us) - **Site Reliability Engineer** <small>(01.2022 - now)</small>
 
-- [Fresha](https://fresha.engineering) - **Backend Engineer** <small>(03.2021 - now)</small>
+- [Fresha](https://fresha.engineering) - **Backend Engineer** <small>(03.2021 - 12.2021)</small>
 
 - [zenloop](https://www.zenloop.com/en) - **Elixir Engineer** <small>(09.2020 - 02.2021)</small>
 

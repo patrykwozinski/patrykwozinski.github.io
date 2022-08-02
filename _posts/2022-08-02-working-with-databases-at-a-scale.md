@@ -61,14 +61,14 @@ defmodule PostRepo.Migrations.AddIdentifierToPostsTable do
 
   def up do
     alter table("posts") do
-		  add :identifier, :string, length: 10
-		end
+        add :identifier, :string, length: 10
+    end
   end
 
   def down do
-		alter table("posts") do
-			remove :identifier
-		end
+    alter table("posts") do
+        remove :identifier
+    end
   end
 end
 ```
